@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Universe | Equipos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <script>
+        (function() {
+            if (document.cookie.indexOf("nfl_cookies_aceptadas=true") === -1) {
+                document.documentElement.classList.add('cookie-bloqueada');
+            }
+        })();
+    </script>
+</head>
+
+<body class="nfl-layout">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-nfl-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold oswald" href="../index.html">NFL<span class="text-danger">UNIVERSE</span></a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="equipos.html">Equipos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="formulario.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5 animate-fade-in">
+        <h1 class="oswald text-center mb-5 display-4 text-white">EXPLORA LAS CONFERENCIAS</h1>
+
+        <ul class="nav nav-pills nav-justified mb-4 shadow-sm" id="conferenciaTab" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active oswald fs-4" id="pills-afc-tab" data-bs-toggle="pill" data-bs-target="#afc-panel">AMERICAN (AFC)</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link oswald fs-4" id="pills-nfc-tab" data-bs-toggle="pill" data-bs-target="#nfc-panel">NATIONAL (NFC)</button>
+            </li>
+        </ul>
+
+        <div class="tab-content pt-4">
+            
+            <div class="tab-pane fade show active" id="afc-panel">
+                <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
+                    <a href="divisiones/afc-east.html" class="btn btn-nfl-blue oswald text-white">AFC EAST</a>
+                    <a href="divisiones/afc-north.html" class="btn btn-nfl-blue oswald text-white">AFC NORTH</a>
+                    <a href="divisiones/afc-south.html" class="btn btn-nfl-blue oswald text-white">AFC SOUTH</a>
+                    <a href="divisiones/afc-west.html" class="btn btn-nfl-blue oswald text-white">AFC WEST</a>
+                </div>
+
+                <section id="afc-east" class="division-block mb-5">
+                    <h2 class="oswald title-blue mb-4">AFC EAST</h2>
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/bills.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Bills</h5><p class="small text-white">Buffalo</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/dolphins.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Dolphins</h5><p class="small text-white">Miami</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/patriots.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Patriots</h5><p class="small text-white">New England</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/jets.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Jets</h5><p class="small text-white">New York</p></div></div></div>
+                    </div>
+                </section>
+
+                <section id="afc-north" class="division-block mb-5">
+                    <h2 class="oswald title-blue mb-4">AFC NORTH</h2>
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/ravens.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Ravens</h5><p class="small text-white">Baltimore</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/bengals.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Bengals</h5><p class="small text-white">Cincinnati</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/browns.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Browns</h5><p class="small text-white">Cleveland</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/steelers.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Steelers</h5><p class="small text-white">Pittsburgh</p></div></div></div>
+                    </div>
+                </section>
+
+                <section id="afc-south" class="division-block mb-5">
+                    <h2 class="oswald title-blue mb-4">AFC SOUTH</h2>
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/texans.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Texans</h5><p class="small text-white">Houston</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/colts.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Colts</h5><p class="small text-white">Indianapolis</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/jaguars.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Jaguars</h5><p class="small text-white">Jacksonville</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/titans.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Titans</h5><p class="small text-white">Tennessee</p></div></div></div>
+                    </div>
+                </section>
+
+                <section id="afc-west" class="division-block mb-5">
+                    <h2 class="oswald title-blue mb-4">AFC WEST</h2>
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/broncos.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Broncos</h5><p class="small text-white">Denver</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/chiefs.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Chiefs</h5><p class="small text-white">Kansas City</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/raiders.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Raiders</h5><p class="small text-white">Las Vegas</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-blue"><img src="../imagenes/equipos/chargers.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Chargers</h5><p class="small text-white">Los Angeles</p></div></div></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="nfc-panel">
+                <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
+                    <a href="divisiones/nfc-east.html" class="btn btn-nfl-red oswald text-white">NFC EAST</a>
+                    <a href="divisiones/nfc-north.html" class="btn btn-nfl-red oswald text-white">NFC NORTH</a>
+                    <a href="divisiones/nfc-south.html" class="btn btn-nfl-red oswald text-white">NFC SOUTH</a>
+                    <a href="divisiones/nfc-west.html" class="btn btn-nfl-red oswald text-white">NFC WEST</a>
+                </div>
+
+                <section id="nfc-east" class="division-block mb-5">
+                    <h2 class="oswald title-red mb-4">NFC EAST</h2>
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/cowboys.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Cowboys</h5><p class="small text-white">Dallas</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/giants.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Giants</h5><p class="small text-white">New York</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/eagles.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Eagles</h5><p class="small text-white">Philadelphia</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/commanders.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Commanders</h5><p class="small text-white">Washington</p></div></div></div>
+                    </div>
+                </section>
+
+                <section id="nfc-north" class="division-block mb-5">
+                    <h2 class="oswald title-red mb-4">NFC NORTH</h2>
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/bears.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Bears</h5><p class="small text-white">Chicago</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/lions.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Lions</h5><p class="small text-white">Detroit</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/packers.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Packers</h5><p class="small text-white">Green Bay</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/vikings.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Vikings</h5><p class="small text-white">Minnesota</p></div></div></div>
+                    </div>
+                </section>
+
+                <section id="nfc-south" class="division-block mb-5">
+                    <h2 class="oswald title-red mb-4">NFC SOUTH</h2>
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/falcons.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Falcons</h5><p class="small text-white">Atlanta</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/panthers.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Panthers</h5><p class="small text-white">Carolina</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/saints.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Saints</h5><p class="small text-white">New Orleans</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/buccaneers.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Buccaneers</h5><p class="small text-white">Tampa Bay</p></div></div></div>
+                    </div>
+                </section>
+
+                <section id="nfc-west" class="division-block mb-5">
+                    <h2 class="oswald title-red mb-4">NFC WEST</h2>
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/cardinals.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Cardinals</h5><p class="small text-white">Arizona</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/rams.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Rams</h5><p class="small text-white">Los Angeles</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/49ers.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">49ers</h5><p class="small text-white">San Francisco</p></div></div></div>
+                        <div class="col-6 col-lg-3"><div class="card team-card h-100 border-red"><img src="../imagenes/equipos/seahawks.png" class="img-fluid p-3"><div class="card-body text-center"><h5 class="oswald">Seahawks</h5><p class="small text-white">Seattle</p></div></div></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-nfl-dark text-white pt-5 pb-3 mt-auto border-top border-4 border-danger">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 footer-section">
+                    <h4 class="oswald fw-bold mb-3">NFL UNIVERSE</h4>
+                    <p class="text-white-50 small pe-md-5">
+                        La plataforma definitiva para los apasionados del football. 
+                        Explora estadísticas, historia y toda la actualidad de las 32 franquicias de la NFL.
+                    </p>
+                </div>
+
+                <div class="col-md-2 footer-section">
+                    <h5 class="oswald footer-category-red">PORTAL</h5>
+                    <ul class="list-unstyled footer-nav-list">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="historia.html">Historia</a></li>
+                        <li><a href="equipos.html">Equipos</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="formulario.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 footer-section">
+                    <h5 class="oswald footer-category-blue">CONFERENCIA AFC</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/afc-east.html">AFC East</a></li>
+                                <li><a href="divisiones/afc-north.html">AFC North</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/afc-south.html">AFC South</a></li>
+                                <li><a href="divisiones/afc-west.html">AFC West</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 footer-section">
+                    <h5 class="oswald footer-category-red">CONFERENCIA NFC</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/nfc-east.html">NFC East</a></li>
+                                <li><a href="divisiones/nfc-north.html">NFC North</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/nfc-south.html">NFC South</a></li>
+                                <li><a href="divisiones/nfc-west.html">NFC West</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 pt-3 border-top border-secondary text-center text-md-start">
+                <div class="col-md-6"><p class="small text-white-50 mb-0">&copy; 2026 NFL Universe. Todos los derechos reservados.</p></div>
+                <div class="col-md-6 text-md-end"><span class="small text-white-50">Práctica Final Desarrollo Web</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-overlay">
+        <div class="card bg-dark border-danger text-white p-5 text-center shadow-lg" style="max-width: 500px; border: 3px solid #dc3545 !important;">
+            <h2 class="oswald text-danger mb-4">POLÍTICA DE COOKIES</h2>
+            <p class="mb-5 text-white-50">NFL UNIVERSE: Debe aceptar las cookies para poder interactuar con el sitio web. Este aviso es obligatorio para la navegación.</p>
+            <button type="button" onclick="gestionarAceptacion()" class="btn btn-danger btn-lg w-100 oswald fw-bold py-3">
+                ACEPTAR Y ENTRAR
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

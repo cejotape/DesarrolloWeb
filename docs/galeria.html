@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Universe | Galería de Leyendas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <script>
+        (function() {
+            if (document.cookie.indexOf("nfl_cookies_aceptadas=true") === -1) {
+                document.documentElement.classList.add('cookie-bloqueada');
+            }
+        })();
+    </script>
+</head>
+
+<body class="bg-nfl-dark nfl-layout">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold oswald" href="../index.html">
+                <span class="text-white">NFL</span><span class="text-danger">UNIVERSE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipos.html">Equipos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="formulario.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5 mt-5" style="min-height: 3000px !important;">
+        <div class="text-center mb-5 pt-4">
+            <h1 class="oswald text-white display-3 fw-bold">GALERÍA DE <span class="text-danger">LEYENDAS</span></h1>
+            <p class="text-white-50">Haz clic en las imágenes para ver los detalles de los momentos más grandes de la NFL.</p>
+        </div>
+
+        <section class="container-fluid py-5 mb-5 bg-dark border-bottom border-danger">
+            <div class="container py-5 text-center">
+                <h1 class="oswald display-1 text-white fw-bold">HALL OF FAME</h1>
+                <p class="text-white-50 fs-4 mx-auto" style="max-width: 800px;">
+                    Explora la colección visual de los atletas que definieron épocas. Desde la era de cuero de Jim Brown hasta la precisión tecnológica de Patrick Mahomes, cada imagen representa un capítulo de gloria en la historia de la NFL.
+                </p>
+            </div>
+        </section>
+
+        <div class="row g-4 mb-5">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/tom_brady.jpg', 'Tom Brady', 'Ganador de siete anillos de la Super Bowl, Brady es considerado el mejor jugador de todos los tiempos. Su liderazgo y precisión bajo presión definieron una era dorada en los Patriots y Buccaneers.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/tom_brady.jpg" class="card-img-top img-galeria h-100" alt="Tom Brady">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/patrick_mahomes.jpg', 'Patrick Mahomes', 'El talento generacional que ha devuelto la gloria a Kansas City.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/patrick_mahomes.jpg" class="card-img-top img-galeria h-100" alt="Patrick Mahomes">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/jerry_rice.jpg', 'Jerry Rice', 'El mejor receptor de todos los tiempos. Posee los récords históricos de recepciones, yardas y touchdowns. Su ética de trabajo y longevidad en los 49ers definieron la excelencia en la NFL.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/jerry_rice.jpg" class="card-img-top img-galeria h-100" alt="Jerry Rice">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/joe_montana.jpg', 'Joe Montana', 'Apodado Joe Cool por su calma bajo presión. Lideró a los 49ers a cuatro victorias en la Super Bowl sin lanzar una sola intercepción en la gran final, siendo el estándar de oro de la precisión.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/joe_montana.jpg" class="card-img-top img-galeria h-100" alt="Joe Montana">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/lawrence_taylor.jpg', 'Lawrence Taylor', 'El defensor que cambió el juego para siempre. Su agresividad como linebacker obligó a las ofensivas a revolucionar sus esquemas de protección y es uno de los pocos defensas ganadores del MVP.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/lawrence_taylor.jpg" class="card-img-top img-galeria h-100" alt="Lawrence Taylor">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/peyton_manning.jpg', 'Peyton Manning', 'El estratega cerebral de la liga. Manning era un entrenador sobre el campo, capaz de diseccionar defensas con su inteligencia y ostentando el récord de más premios MVP de la temporada.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/peyton_manning.jpg" class="card-img-top img-galeria h-100" alt="Peyton Manning">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/ray_lewis.jpg', 'Ray Lewis', 'El alma de los Baltimore Ravens. Su intensidad y liderazgo vocal lo convirtieron en el linebacker más temido de su época, siendo el corazón de dos defensas campeonas de la Super Bowl.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/ray_lewis.jpg" class="card-img-top img-galeria h-100" alt="Ray Lewis">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/walter_payton.jpg', 'Walter Payton', 'Conocido como Sweetness. Payton personificó la versatilidad en Chicago, destacando por su dureza para correr, su agilidad para recibir y su compromiso inquebrantable en cada jugada.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/walter_payton.jpg" class="card-img-top img-galeria h-100" alt="Walter Payton">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/deion_sanders.jpg', 'Deion Sanders', 'Prime Time fue el atleta definitivo. Dominó como cornerback y retornador con una velocidad eléctrica, ganando títulos con equipos diferentes gracias a su talento único.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/deion_sanders.jpg" class="card-img-top img-galeria h-100" alt="Deion Sanders">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/emmitt_smith.jpg', 'Emmitt Smith', 'El líder histórico en yardas terrestres. Fue la pieza central de los Dallas Cowboys de los 90, demostrando una durabilidad y visión asombrosas para encontrar huecos.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/emmitt_smith.jpg" class="card-img-top img-galeria h-100" alt="Emmitt Smith">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/barry_sanders.jpg', 'Barry Sanders', 'El corredor más elusivo de la historia. Sanders era capaz de quebrar cinturas con un solo movimiento, convirtiendo jugadas rotas en touchdowns espectaculares con los Detroit Lions.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/barry_sanders.jpg" class="card-img-top img-galeria h-100" alt="Barry Sanders">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/dan_marino.jpg', 'Dan Marino', 'El brazo más rápido de la NFL. Marino revolucionó el juego aéreo en los Miami Dolphins, estableciendo récords de pase que tardaron décadas en ser superados.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/dan_marino.jpg" class="card-img-top img-galeria h-100" alt="Dan Marino">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/aaron_donald.jpg', 'Aaron Donald', 'Una fuerza de la naturaleza en el interior de la línea. Ganó tres premios al Jugador Defensivo del Año gracias a su capacidad para generar presión constante.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/aaron_donald.jpg" class="card-img-top img-galeria h-100" alt="Aaron Donald">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/jim_brown.jpg', 'Jim Brown', 'Dominancia absoluta en estado puro. Nunca se perdió un partido en su carrera y se retiró como el corredor con mejor promedio de yardas de la historia.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/jim_brown.jpg" class="card-img-top img-galeria h-100" alt="Jim Brown">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/rob_gronkowski.jpg', 'Rob Gronkowski', 'El Tight End definitivo. Su combinación de tamaño, potencia de bloqueo y manos seguras lo convirtieron en el socio letal de Tom Brady.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/rob_gronkowski.jpg" class="card-img-top img-galeria h-100" alt="Rob Gronkowski">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/brett_favre.jpg', 'Brett Favre', 'El pistolero de Green Bay. Conocido por su brazo de cañón y su durabilidad legendaria al jugar cientos de partidos consecutivos como titular.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/brett_favre.jpg" class="card-img-top img-galeria h-100" alt="Brett Favre">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/odell_beckham.jpg', 'Odell Beckham Jr.', 'Famoso por realizar la mejor recepción de la historia con una sola mano. OBJ combina una agilidad felina con una capacidad de salto que desafía las leyes de la física, siendo un icono cultural de la NFL moderna.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/odell_beckham.jpg" class="card-img-top img-galeria h-100" alt="Odell Beckham Jr.">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/dk_metcalf.jpg', 'D.K. Metcalf', 'Un espécimen físico sin precedentes. Con su combinación de 1.93m de altura, 106kg de puro músculo y una velocidad de élite, Metcalf es la pesadilla de cualquier cornerback en rutas profundas con los Steelers.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/dk_metcalf.jpg" class="card-img-top img-galeria h-100" alt="D.K. Metcalf">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/tyreek_hill.jpg', 'Tyreek Hill', 'Apodado Cheetah por ser el jugador más rápido de la liga. Hill tiene la capacidad de anotar un touchdown en cualquier jugada gracias a su aceleración explosiva y su agilidad para cambiar de dirección en milisegundos.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/tyreek_hill.jpg" class="card-img-top img-galeria h-100" alt="Tyreek Hill">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/jaxon_sn.jpg', 'Jaxson Smith-Njigba', 'Uno de los talentos jóvenes más brillantes de los Seattle Seahawks. JSN destaca por su capacidad de correr rutas perfectas y su control del cuerpo en el aire, siendo el futuro de la recepción en la liga.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/jaxon_sn.jpg" class="card-img-top img-galeria h-100" alt="Jaxson Smith-Njigba">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/derrick_henry.jpg', 'Derrick Henry', 'Apodado King Henry. Es uno de los pocos corredores en la historia en superar las 2.000 yardas en una temporada. Su físico imponente y su famoso Stiff Arm lo convierten en una fuerza imparable en el campo.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/derrick_henry.jpg" class="card-img-top img-galeria h-100" alt="Derrick Henry">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/justin_jefferson.jpg', 'Justin Jefferson', 'El receptor con el mejor inicio de carrera en la historia de la liga. Famoso por su celebración Griddy y su capacidad para ganar balones divididos, es la cara de la nueva generación de estrellas de la NFL.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/justin_jefferson.jpg" class="card-img-top img-galeria h-100" alt="Justin Jefferson">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/lamar_jackson.jpg', 'Lamar Jackson', 'Dos veces MVP de la liga. Jackson ha revolucionado la posición de quarterback con su velocidad de élite y agilidad, siendo tan peligroso corriendo como lanzando el balón con los Baltimore Ravens.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/lamar_jackson.jpg" class="card-img-top img-galeria h-100" alt="Lamar Jackson">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 galeria-card" 
+                    onclick="abrirDetalle('../imagenes/leyendas/aj_brown.jpg', 'A.J. Brown', 'Un receptor físico y dominante. Brown destaca por su fuerza tras la recepción, siendo capaz de romper placajes y convertir pases cortos en touchdowns de larga distancia con los Philadelphia Eagles.')">
+                    <div class="overflow-hidden h-100">
+                        <img src="../imagenes/leyendas/aj_brown.jpg" class="card-img-top img-galeria h-100" alt="A.J. Brown">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="modal fade" id="modalGaleria" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-nfl-dark border-danger text-white">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title oswald" id="tituloModal">Detalle de Imagen</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" id="imagenModal" class="img-fluid rounded shadow-lg mb-3" alt="Grande">
+                    <p id="textoModal" class="text-white-50 fs-5 px-3"></p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-danger oswald" data-bs-dismiss="modal">CERRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-nfl-dark text-white pt-5 pb-3 mt-auto border-top border-4 border-danger">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 footer-section">
+                    <h4 class="oswald fw-bold mb-3">NFL UNIVERSE</h4>
+                    <p class="text-white-50 small pe-md-5">
+                        La plataforma definitiva para los apasionados del football. 
+                        Explora estadísticas, historia y toda la actualidad de las 32 franquicias de la NFL.
+                    </p>
+                </div>
+
+                <div class="col-md-2 footer-section">
+                    <h5 class="oswald footer-category-red">PORTAL</h5>
+                    <ul class="list-unstyled footer-nav-list">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="historia.html">Historia</a></li>
+                        <li><a href="equipos.html">Equipos</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="formulario.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 footer-section">
+                    <h5 class="oswald footer-category-blue">CONFERENCIA AFC</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/afc-east.html">AFC East</a></li>
+                                <li><a href="divisiones/afc-north.html">AFC North</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/afc-south.html">AFC South</a></li>
+                                <li><a href="divisiones/afc-west.html">AFC West</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 footer-section">
+                    <h5 class="oswald footer-category-red">CONFERENCIA NFC</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/nfc-east.html">NFC East</a></li>
+                                <li><a href="divisiones/nfc-north.html">NFC North</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/nfc-south.html">NFC South</a></li>
+                                <li><a href="divisiones/nfc-west.html">NFC West</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 pt-3 border-top border-secondary text-center text-md-start">
+                <div class="col-md-6"><p class="small text-white-50 mb-0">&copy; 2026 NFL Universe. Todos los derechos reservados.</p></div>
+                <div class="col-md-6 text-md-end"><span class="small text-white-50">Práctica Final Desarrollo Web</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-overlay">
+        <div class="card bg-dark border-danger text-white p-5 text-center shadow-lg" style="max-width: 500px; border: 3px solid #dc3545 !important;">
+            <h2 class="oswald text-danger mb-4">POLÍTICA DE COOKIES</h2>
+            <p class="mb-5 text-white-50">NFL UNIVERSE: Debe aceptar las cookies para poder interactuar con el sitio web. Este aviso es obligatorio para la navegación.</p>
+            <button type="button" onclick="gestionarAceptacion()" class="btn btn-danger btn-lg w-100 oswald fw-bold py-3">
+                ACEPTAR Y ENTRAR
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

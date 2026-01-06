@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Universe | Registro Fan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <script>
+        (function() {
+            if (document.cookie.indexOf("nfl_cookies_aceptadas=true") === -1) {
+                document.documentElement.classList.add('cookie-bloqueada');
+            }
+        })();
+    </script>
+</head>
+
+<body class="bg-formulario-nfl nfl-layout">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold oswald" href="../index.html">
+                <span class="text-white">NFL</span><span class="text-danger">UNIVERSE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipos.html">Equipos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="formulario.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+
+        <div class="row justify-content-center mb-5 animate-fade-in" style="padding-top: 40px;">
+            <div class="col-lg-10">
+                <div class="card bg-dark border-secondary text-white p-4 rounded-4 shadow">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <img src="../imagenes/contacto/IMG_5539.jpeg" class="img-fluid rounded-circle border border-danger p-1" alt="Foto del Autor" style="width: 160px; height: 175px; object-fit: cover;">
+                        </div>
+                        <div class="col-md-9">
+                            <h1 class="oswald text-danger">Desarrollado por: Carlos Jiménez Pelegrín</h1>
+                            <p class="lead">Elegí la NFL como tema principal ya que es un tema del que se habla muy poco en España y es un deporte que me gusta bastante, sumándole que es muy visual, lo consideré una buena elección para hacer el trabajo sobre él.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mb-5 animate-fade-in" style="padding-top: 40px;">
+            <h1 class="display-4 oswald text-white fw-bold">ÚNETE AL <span class="text-danger">UNIVERSE</span></h1>
+            <p class="lead text-white-50">Regístrate para recibir contenido exclusivo y tu Pack de Bienvenida Digital.</p>
+        </div>
+
+        <div class="row justify-content-center mb-5 animate-fade-in">
+            <div class="col-12 col-md-8 col-lg-5">
+                <div class="card card-formulario shadow-lg border-0 rounded-4 overflow-hidden">
+                    <div class="card-header bg-nfl-blue text-white py-4 text-center">
+                        <h2 class="oswald mb-0">FAN ZONE REGISTRATION</h2>
+                        <p class="small mb-0 opacity-75">Temporada 2025 / 2026</p>
+                    </div>
+                    
+                    <div class="card-body p-4">
+                        <form id="nflForm" action="https://postman-echo.com/post" method="POST" class="needs-validation" novalidate>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder=" " required minlength="3">
+                                <label for="nombre">Nombre</label>
+                                <div class="invalid-feedback text-danger">El nombre es obligatorio.</div>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder=" " required>
+                                <label for="apellidos">Apellidos</label>
+                                <div class="invalid-feedback text-danger">Los apellidos son obligatorios.</div>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder=" " required>
+                                <label for="email">Correo Electrónico</label>
+                                <div class="invalid-feedback text-danger">Introduce un email válido.</div>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{9,15}" placeholder=" " required>
+                                <label for="telefono">Teléfono</label>
+                                <div class="invalid-feedback text-danger">Teléfono obligatorio (9-15 dígitos).</div>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="direccion" name="direccion" placeholder=" " required>
+                                <label for="direccion">Dirección de Envío</label>
+                                <div class="invalid-feedback text-danger">La dirección es necesaria para el envío del pack.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-bold d-block small mb-2">Conferencia de tu equipo:</label>
+                                <div class="d-flex gap-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="conf" id="afc" value="AFC" required>
+                                        <label class="form-check-label text-white-50" for="afc">AFC</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="conf" id="nfc" value="NFC" required>
+                                        <label class="form-check-label text-white-50" for="nfc">NFC</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input class="form-control" list="datalistEquipos" id="equipoLista" name="equipo" placeholder=" " required>
+                                <label for="equipoLista">Tu franquicia a ganar este Super Bowl</label>
+                                
+                                <datalist id="datalistEquipos">
+                                    <option value="Pittsburgh Steelers">
+                                    <option value="San Francisco 49ers">
+                                    <option value="Carolina Panthers">
+                                    <option value="Green Bay Packers">
+                                    <option value="New England Patriots">
+                                    <option value="Houston Texans">
+                                    <option value="Los Angeles Rams">
+                                    <option value="Buffalo Bills">
+                                    <option value="Seattle Seahawks">
+                                    <option value="Philadelphia Eagles">
+                                    <option value="Los Angeles Chargers">
+                                    <option value="Jacksonville Jaguars">
+                                    <option value="Denver Broncos">
+                                    <option value="Chicago Bears">
+                                </datalist>
+                                <div class="invalid-feedback text-danger">Selecciona un equipo de la lista.
+                                    
+                            </div>
+</div>
+
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="terminos" required>
+                                <label class="form-check-label small text-white-50" for="terminos">Acepto los términos y el tratamiento de datos</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-nfl-blue text-white w-100 py-3 fs-5">
+                                ENVIAR REGISTRO
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container mb-5 py-5 border-top border-secondary">
+            <div class="col-md-6">
+            <h2 class="oswald text-white mb-4 border-bottom border-danger pb-2">NUESTRA UBICACIÓN</h2>
+            <p class="text-white-50 mb-4">Visítanos en las oficinas centrales de fans en Pittsburgh o encuéntranos en el estadio los días de partido.</p>
+            
+            <div class="ratio ratio-16x9 shadow-lg border border-secondary rounded overflow-hidden">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.068224522434!2d-80.0183353234185!3d40.4467647714349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f40214bc6405%3A0x8590d1891f55b9c8!2sAcrisure%20Stadium!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="py-5 mt-5">
+            <h3 class="oswald title-red text-white mb-5">VENTAJAS EXCLUSIVAS</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="division-block text-center h-100">
+                        <h4 class="oswald text-danger">NEWSLETTER 24/7</h4>
+                        <p class="small text-white-50">Resumen semanal con lo mejor de la AFC y NFC.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="division-block text-center h-100">
+                        <h4 class="oswald text-danger">PRE-VENTA</h4>
+                        <p class="small text-white-50">Acceso prioritario a los NFL Games en Madrid.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="division-block text-center h-100">
+                        <h4 class="oswald text-danger">SORTEOS</h4>
+                        <p class="small text-white-50">Gana merchandising oficial cada mes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 mt-5 border-top border-secondary">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-white-50">
+                    <h3 class="oswald title-blue text-white mb-4 text-uppercase">Términos del Servicio Fan Zone 2026</h3>
+                    <p>Al registrarte en NFL Universe, confirmas que los datos proporcionados son verídicos. Esta plataforma se rige por la normativa de protección de datos vigente en 2026.</p>
+                    <p>La National Football League y sus marcas asociadas son propiedad de sus respectivos dueños. Este sitio tiene fines exclusivamente académicos y divulgativos dentro de la práctica de Desarrollo Web.</p>
+                    <p>El tratamiento de los datos será estrictamente confidencial y se utilizará para el envío de comunicaciones relacionadas con la comunidad. Puedes solicitar la baja del servicio en cualquier momento enviando un correo a soporte.</p>
+                    <p>Para asegurar que la experiencia sea óptima, recomendamos mantener tu perfil actualizado. Los registros duplicados serán eliminados automáticamente por nuestro sistema para garantizar la igualdad en los sorteos de merchandising.</p>
+                    <p>Este portal ha sido diseñado para soportar resoluciones desde 393px hasta 1920px Full HD, asegurando que todos los fans puedan acceder desde cualquier dispositivo.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-nfl-dark text-white pt-5 pb-3 mt-auto border-top border-4 border-danger">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 footer-section">
+                    <h4 class="oswald fw-bold mb-3">NFL UNIVERSE</h4>
+                    <p class="text-white-50 small pe-md-5">
+                        La plataforma definitiva para los apasionados del football. 
+                        Explora estadísticas, historia y toda la actualidad de las 32 franquicias de la NFL.
+                    </p>
+                </div>
+
+                <div class="col-md-2 footer-section">
+                    <h5 class="oswald footer-category-red">PORTAL</h5>
+                    <ul class="list-unstyled footer-nav-list">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="historia.html">Historia</a></li>
+                        <li><a href="equipos.html">Equipos</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="formulario.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 footer-section">
+                    <h5 class="oswald footer-category-blue">CONFERENCIA AFC</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/afc-east.html">AFC East</a></li>
+                                <li><a href="divisiones/afc-north.html">AFC North</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/afc-south.html">AFC South</a></li>
+                                <li><a href="divisiones/afc-west.html">AFC West</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 footer-section">
+                    <h5 class="oswald footer-category-red">CONFERENCIA NFC</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/nfc-east.html">NFC East</a></li>
+                                <li><a href="divisiones/nfc-north.html">NFC North</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-nav-list">
+                                <li><a href="divisiones/nfc-south.html">NFC South</a></li>
+                                <li><a href="divisiones/nfc-west.html">NFC West</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 pt-3 border-top border-secondary text-center text-md-start">
+                <div class="col-md-6"><p class="small text-white-50 mb-0">&copy; 2026 NFL Universe. Todos los derechos reservados.</p></div>
+                <div class="col-md-6 text-md-end"><span class="small text-white-50">Práctica Final Desarrollo Web</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-overlay">
+        <div class="card bg-dark border-danger text-white p-5 text-center shadow-lg" style="max-width: 500px; border: 3px solid #dc3545 !important;">
+            <h2 class="oswald text-danger mb-4">POLÍTICA DE COOKIES</h2>
+            <p class="mb-5 text-white-50">NFL UNIVERSE: Debe aceptar las cookies para poder interactuar con el sitio web. Este aviso es obligatorio para la navegación.</p>
+            <button type="button" onclick="gestionarAceptacion()" class="btn btn-danger btn-lg w-100 oswald fw-bold py-3">
+                ACEPTAR Y ENTRAR
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
