@@ -1,0 +1,403 @@
+/* ==========================================================
+   1. CONFIGURACIÓN BASE, VARIABLES Y ESTRUCTURA
+   ========================================================== */
+:root {
+    --nfl-blue: #00529b;
+    --nfl-red: #D50A0A;
+    --nfl-dark: #0a0e12;
+    --nfl-white: #ffffff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--nfl-dark);
+    scroll-behavior: smooth;
+}
+
+/* Altura mínima 3000px */
+body.index-page, 
+body.nfl-layout,
+body.bg-formulario-nfl { /* Añadida clase para el formulario ya que me estaba dando problemas el nfl-layout */
+    min-height: 3000px !important; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Margen para que la navbar fija no tape el contenido */
+body.nfl-layout {
+    padding-top: 80px; 
+}
+
+/* Ajuste de scroll para anclas */
+:target {
+    scroll-margin-top: 140px; 
+}
+
+
+/* ==========================================================
+   2. NAVEGACIÓN (NAVBAR Y MENÚS)
+   ========================================================== */
+.navbar.fixed-top {
+    background: rgba(10, 14, 18, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--nfl-red);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--nfl-red) !important;
+}
+
+.sticky-top {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--nfl-dark) !important;
+}
+
+/* Botones de conferencia */
+.nav-pills .nav-link {
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.2);
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+#pills-afc-tab.active { background-color: var(--nfl-blue) !important; }
+#pills-nfc-tab.active { background-color: var(--nfl-red) !important; }
+
+
+/* ==========================================================
+   3. COMPONENTES GLOBALES (BOTONES Y TÍTULOS)
+   ========================================================== */
+/* Botones de divisiones */
+.btn-nfl-blue { background-color: var(--nfl-blue) !important; color: white !important; border: none; transition: 0.3s; }
+.btn-nfl-red { background-color: var(--nfl-red) !important; color: white !important; border: none; transition: 0.3s; }
+
+.btn-nfl-blue.active, .btn-nfl-red.active {
+    border: 2px solid white !important;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    font-weight: bold;
+}
+
+.btn-nfl-blue:hover { transform: translateY(-3px); filter: brightness(1.2); }
+
+/* Títulos con línea lateral */
+.title-blue { 
+    border-left: 8px solid var(--nfl-blue); 
+    padding-left: 15px; 
+    color: var(--nfl-blue) !important;
+    font-weight: bold;
+}
+
+.title-red { 
+    border-left: 8px solid var(--nfl-red); 
+    padding-left: 15px; 
+    color: var(--nfl-red) !important;
+    font-weight: bold;
+}
+
+.text-white.title-blue, .text-white.title-red { color: white !important; }
+
+
+/* ==========================================================
+   4. SECCIONES DE CONTENIDO, CARDS Y GRÁFICOS
+   ========================================================== */
+.main-gradient-wrapper {
+    background: linear-gradient(to bottom, var(--nfl-blue) 0%, var(--nfl-dark) 40%, var(--nfl-dark) 100%) !important;
+    flex: 1;
+}
+
+.division-block {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 40px;
+}
+
+/* Team Cards (Equipos) */
+.team-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    border-radius: 20px !important;
+    color: white !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card img {
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    height: 120px !important;
+    object-fit: contain !important;
+    padding: 15px;
+    mix-blend-mode: multiply;
+}
+
+.team-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* News Cards (Noticias) */
+.news-card {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.news-card p { color: #cbd5e0 !important; font-size: 0.95rem; }
+.news-card .oswald { color: var(--nfl-white) !important; letter-spacing: 1px; }
+
+
+/* ==========================================================
+   5. CARRUSELES (INDEX Y DIVISIONES)
+   ========================================================== */
+/* Carrusel Divisiones */
+#carouselDivision .carousel-item img {
+    height: 750px;
+    object-fit: cover;
+    filter: brightness(50%) contrast(1.1);
+}
+
+#carouselDivision .carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    bottom: 10%;
+    backdrop-filter: blur(5px);
+}
+
+#carouselDivision .carousel-caption h4 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+/* Carrusel Principal (Index) */
+#carouselHome .carousel-item img { filter: brightness(40%) contrast(1.1); }
+
+#carouselHome .carousel-item::after {
+    content: "";
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+}
+
+#carouselHome .carousel-caption { z-index: 2; text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); }
+#carouselHome .carousel-caption h1 { text-shadow: 2px 2px 20px rgba(0, 0, 0, 1); }
+#carouselHome .carousel-caption h3 {
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block; padding: 5px 20px; border-radius: 50px;
+    backdrop-filter: blur(5px);
+}
+
+
+/* ==========================================================
+   6. FORMULARIO (Contacto)
+   ========================================================== */
+/* Fondo oscuro por estética más que otra cosa */
+.bg-formulario-nfl {
+    background: linear-gradient(180deg, var(--nfl-dark) 0%, #1a1f24 50%, var(--nfl-dark) 100%) !important;
+}
+
+.card-formulario {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+/* ARREGLO DE VISIBILIDAD DE PLACEHOLDERS (el hacer el arreglo desde varios navegadores ha sido sacado de Gemini) */
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important; /* Blanco al 50% de opacidad */
+    opacity: 1; /* Necesario para Firefox */
+}
+
+/* También para Internet Explorer y Edge antiguo */
+.form-control:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.form-control::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.card-header.bg-nfl-blue {
+    background-color: var(--nfl-blue) !important;
+    border-bottom: 4px solid var(--nfl-white);
+}
+
+.card-formulario .form-control {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.card-formulario .form-control:focus {
+    border-color: var(--nfl-blue);
+    box-shadow: 0 0 0 0.25rem rgba(0, 82, 155, 0.25);
+}
+
+/* Radio Buttons específicos */
+#afc:checked { background-color: var(--nfl-blue); border-color: var(--nfl-blue); }
+#nfc:checked { background-color: var(--nfl-red); border-color: var(--nfl-red); }
+
+
+/* ==========================================================
+   7. GALERÍA Y MODALES
+   ========================================================== */
+/* --- Estilo unificado de tarjetas, para evitar diferencias de tamaño, poco estético --- */
+.galeria-card {
+    background-color: transparent !important;
+    border: 2px solid #444 !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    height: 300px !important; /* Controla altura de todas las tarjetas */
+}
+
+.galeria-card:hover {
+    transform: scale(1.03); /* Efecto de zoom ligero al pasar el ratón */
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 15px rgba(220, 53, 69, 0.5);
+}
+
+/* Ajuste de imagen para llenar toda la tarjeta */
+.img-galeria {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover; /* Esto garantiza que todas las fotos se vean del mismo tamaño sin deformarse */
+    display: block;
+}
+
+/* --- AJUSTE DEL MODAL --- */
+/* Este es mi elemento modal del trabajo */
+#modalGaleria {
+    z-index: 1060 !important;
+}
+
+#modalGaleria .modal-dialog {
+    margin-top: 100px;  
+    max-width: 700px;
+}
+
+#modalGaleria .modal-content {
+    background-color: #111111 !important;
+    border: 2px solid #dc3545;
+}
+
+#imagenModal {
+    max-height: 500px;
+    object-fit: contain;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+#textoModal {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 5px;
+    color: #ffffff !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    border-left: 4px solid #dc3545;
+}
+
+
+/* ==========================================================
+   8. COOKIES Y OVERLAYS
+   ========================================================== */
+/* Estilo del Overlay de Cookies */
+#cookie-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    z-index: 100000;
+    backdrop-filter: blur(15px);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Clase que activa el bloqueo (se añade por el JS que hay en el head) */
+.cookie-bloqueada #cookie-overlay {
+    display: flex !important;
+}
+
+.cookie-bloqueada body {
+    overflow: hidden !important; /* Impide interacción/scroll */
+}
+
+
+/* ==========================================================
+   9. FOOTER
+   ========================================================== */
+footer {
+    margin-top: auto;
+    background-color: var(--nfl-dark);
+    border-top: 3px solid var(--nfl-red);
+}
+
+.footer-section { margin-bottom: 1.5rem; }
+.footer-category-red { border-bottom: 2px solid var(--nfl-red); padding-bottom: 5px; margin-bottom: 15px; display: inline-block; font-weight: bold; }
+.footer-category-blue { border-bottom: 2px solid var(--nfl-blue); padding-bottom: 5px; margin-bottom: 15px; display: inline-block; font-weight: bold; }
+
+.footer-nav-list li { margin-bottom: 8px; }
+.footer-nav-list a { text-decoration: none; color: #adb5bd; font-size: 0.9rem; transition: 0.3s; display: inline-block; width: 100%; }
+.footer-nav-list a:hover { color: var(--nfl-red); transform: translateX(5px); }
+
+
+/* ==========================================================
+   10. RESPONSIVE, ANIMACIONES Y BANNERS
+   ========================================================== */
+/* Ajustes para el Banner */
+#nflBanner {
+    transition: all 0.3s ease;
+    border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+/* En móviles (Extra Small), forzamos que sea fijo abajo */
+@media (max-width: 575.98px) {
+    #nflBanner {
+        position: fixed !important;
+        bottom: 0 !important;
+        top: auto !important;
+        width: 100%;
+    }
+}
+
+/* En tablets y PC, lo dejamos en la posición predeterminada (abajo también) */
+@media (min-width: 768px) {
+    #nflBanner {
+        margin-top: 80px; /* Para que no se pegue a la Navbar fija */
+    }
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-section { text-align: center; margin-bottom: 2rem; }
+    .footer-nav-list a:hover { transform: none; }
+}
+
+/* Animaciones */
+.animate-fade-in { animation: fadeInContainer 0.6s ease-out; }
+
+@keyframes fadeInContainer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
